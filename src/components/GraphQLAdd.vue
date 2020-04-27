@@ -56,14 +56,9 @@
 
 <script>
 export default {
-  data: function() {
-    return {
-      id: this.$store.getters.currentEditableRecipe.id,
-      title: this.$store.getters.currentEditableRecipe.title,
-      instructions: this.$store.getters.currentEditableRecipe.instructions,
-      ingredients: this.$store.getters.currentEditableRecipe.ingredients,
-    }
-  },
+  data: () => ({
+    
+  }),
   methods: {
     onDone() {
       return console.log('Done')
