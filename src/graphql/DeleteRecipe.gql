@@ -1,0 +1,11 @@
+mutation DeleteRecipe ($title: String!, $imageURL: String!) {
+  deleteRecipe (where:
+    { id: $id }
+    data: {
+      title: $name,
+      imageUrl: $imageURL
+    }
+  ) {
+    id
+  }
+}

@@ -1,0 +1,12 @@
+query AllRecipes ($searchString: String) {
+  Recipes (searchString: $searchString) {
+    id 
+    title
+    instructions
+    ingredients {
+      quantity
+      title
+      type
+    }
+  }
+}

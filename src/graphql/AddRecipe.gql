@@ -1,0 +1,7 @@
+mutation AddRecipe ($title: String!, $imageURL: String!) {
+  createRecipe (
+    title: name,
+    imageUrl: imageURL
+  )
+  id
+}

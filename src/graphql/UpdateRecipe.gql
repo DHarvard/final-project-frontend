@@ -1,0 +1,12 @@
+mutation UpdateRecipe ($title: String!, $imageURL: String!) {
+  updateRecipe (where:
+    { id: $id }
+    data: {
+      title: $name,
+      imageUrl: $imageURL
+    }
+  ) {
+    id
+  }
+}
+  
