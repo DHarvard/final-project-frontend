@@ -8,5 +8,6 @@ query AllRecipes ($searchString: String) {
       title
       type
     }
+    imageUrl
   }
 }

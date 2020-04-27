@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <h1 class="text-center">REST: Edit a Recipe!!</h1>
         <!-- Form here -->
         <v-card class="mx-auto" max-width="750">
             <v-form>
@@ -10,23 +11,7 @@
                 </v-row>
                 <v-row>
                     <v-col cols="12" md="12">
-                        <v-textarea v-model="instructions" label="Recipe instructions" rows="4" filled clearable></v-textarea>
-                    </v-col>
-                </v-row>
-                <v-row >
-                    <v-col cols="12" md="12">
-                        <v-text-field v-model="ingredients" filled label="Recipe ingredients quantity"></v-text-field>
-                    </v-col>
-                    <v-col cols="12" md="12">
-                        <v-text-field v-model="ingredients" filled label="Recipe ingredients title"></v-text-field>
-                    </v-col>
-                    <v-col cols="12" md="12">
-                        <v-text-field v-model="ingredients" filled label="Recipe ingredients type"></v-text-field>
-                    </v-col>
-                </v-row>
-                <v-row >
-                    <v-col cols="12" md="12">
-                        <v-text-field v-model="imageURL" filled label="Recipe imageURL"></v-text-field>
+                        <v-textarea v-model="content" label="Recipe content" rows="4" filled clearable></v-textarea>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -65,5 +50,8 @@ export default {
     .buttonFix {
         margin: inherit;
         margin: 1rem 0;
+    }
+    .v-text-field {
+      margin: 0 2rem;
     }
 </style>

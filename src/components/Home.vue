@@ -5,6 +5,7 @@
       :variables="{ searchString }"
     >
       <template slot-scope="{ result: { loading, error, data } }">
+        <h1 class="text-center">Welcome to the GraphQL home!</h1>
         <!-- Loading -->
         <div v-if="loading" class="loading apollo">Loading...</div>
 
@@ -14,18 +15,16 @@
         <!-- Result -->
         <div v-else-if="data" class="result apollo">
           <v-row>
-            <v-col cols="6" v-for="(item,i) in data.Recipes" :key="i">
-              <v-card class="mx-auto" max-width="350">
+            <v-col cols="12" v-for="(item,i) in data.Recipes" :key="i">
+              <v-card class="mx-auto">
                 <v-card-text>
                   <h1> {{ item.title }} </h1>
+                  <div class=""> <v-img :src="item.imageUrl" alt="recipe image"  max-width="500" max-height="350"></v-img></div>
+                  <h2> Instructions </h2>
                   <div > {{ item.instructions}} </div>
+                  <h2> Ingredients </h2>
                   <div> {{ item.ingredients}} </div>
                 </v-card-text>
-                <v-card-actions>
-                <v-btn color="primary" fab x-small dark @click="editRecipe(item)">
-              <v-icon>mdi-pencil</v-icon>
-            </v-btn>
-              </v-card-actions>
               </v-card>
             </v-col>
           </v-row>
@@ -52,5 +51,11 @@
 <style>
 .result {
   padding: 1rem;
+}
+h1 {
+  padding-bottom: 1rem;
+}
+h2 {
+  padding: .5rem 0;
 }
 </style>

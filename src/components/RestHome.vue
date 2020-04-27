@@ -1,8 +1,17 @@
 <template>
-<v-container>
-<h1>Welcome to the REST home!</h1>
-<v-btn @click="getAllProducts">Get Data</v-btn>
-</v-container>
+  <v-container>
+    <h1 class="text-center">Welcome to the REST home!</h1>
+    <v-row>
+      <v-col cols="4" v-for="(recipe,i) in recipes" :key="i">
+        <v-card class="mx-auto recipe" max-width="350">
+          <v-card-text>
+            <h1> {{ recipe.title }} </h1>
+            <div> {{ recipe.content}} </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -10,27 +19,42 @@
 export default {
   name: 'RestHome',
 
-  data: () => ({
-  }),
+  data() {
+    return {
+      recipes: []
+    }
+  },
+  computed: {
+    loading() {
+      return !(this.recipes.length > 0)
+    }
+  },
   methods: {
-    getPosts() {
-      fetch('http://localhost:5000/recipes/posts',
-      {
-          method: 'GET',
+    getRecipes() {
+      fetch('https://thawing-chamber-73654.herokuapp.com/recipes/posts')
+      .then((response) => {
+        return response.json()
       })
-      .then(response => {
-         response.json().then(data => {
-                return console.log(data)
-          })
+      .then((data) => {
+        this.recipes = data.posts
       })
-      .catch(error => {
-          return console.error(error)
+      .catch((err) => {
+        console.error('Error getting recipes:', err)
       })
     }
+  },
+  created() {
+    this.getRecipes()
   }
 }
 </script>
 
 <style scoped>
-
+  h1 {
+    line-height: 1.3;
+    padding-bottom: 1rem;
+  }
+  .recipe {
+    height: 200px;
+  }
 </style>
