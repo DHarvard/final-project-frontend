@@ -21,12 +21,21 @@
                   <h1> {{ item.title }} </h1>
                   <div class=""> <v-img :src="item.imageUrl" alt="recipe image"  max-width="500" max-height="350"></v-img></div>
                   <h2> Instructions </h2>
-                  <div > {{ item.instructions}} </div>
+                  <v-row>
+                    <v-col v-for="(item,i) in item.instructions" :key="i">
+                      <p> {{ item }} </p>
+                    </v-col>
+                  </v-row>
+                  <!-- <v-row>
+                    <v-col v-for="i=0; i<item.instructions.length; i++" :key="i">
+                      <div> {{ instructions}} </div>
+                    </v-col>
+                  </v-row> -->
                   <h2> Ingredients </h2>
                   <v-row>
                     <v-col cols="4" v-for="(item, i) in item.ingredients" :key="i">
                       <h4>Title</h4>
-                      <div class="ingredients"> {{ item.title}} </div>
+                      <div class="ingredients"> {{ item.title.charAt(0).toUpperCase() + item.title.substring(1)}} </div>
                       <h4>Quantity</h4>
                       <div class="ingredients"> {{ item.quantity}} </div>
                       <h4>Type</h4>
