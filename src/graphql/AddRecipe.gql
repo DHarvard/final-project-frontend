@@ -1,6 +1,6 @@
 mutation AddRecipe ($title: String!, $imageURL: String!) {
-  createRecipe (
-    title: name,
+  createOneRecipe (
+    title: title,
     imageUrl: imageURL
   )
   id

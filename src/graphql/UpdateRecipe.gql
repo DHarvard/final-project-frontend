@@ -1,5 +1,5 @@
 mutation UpdateRecipe ($title: String!, $imageURL: String!) {
-  updateRecipe (where:
+  updateOneRecipe (where:
     { id: $id }
     data: {
       title: $name,

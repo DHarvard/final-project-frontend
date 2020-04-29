@@ -4,8 +4,8 @@
     :variables="{
       id,
       title,
-      // instructions,
-      // ingredients
+      instructions,
+      ingredients
       }"
       @done="onDone"
   >
@@ -75,7 +75,6 @@ export default {
       this.$router.push('/')
     },
     deleteRecipe() {
-			
 		},
   }
 }

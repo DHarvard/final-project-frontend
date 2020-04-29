@@ -5,7 +5,8 @@
       id,
       title,
       instructions,
-      ingredients
+      ingredients,
+      imageUrl
       }"
       @done="onDone"
   >

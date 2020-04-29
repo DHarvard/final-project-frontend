@@ -28,6 +28,11 @@ export default new VueRouter({
             component: GraphQLEdit
         },
         {
+            path: '/graphql-edit/:recipeId',
+            name: "graphql-edit",
+            component: GraphQLEdit
+        },
+        {
             path: '/rest-home',
             name: "rest-home",
             component: RestHome
