@@ -9,12 +9,10 @@
     </router-link>
     <v-spacer></v-spacer>
     <div>
-        <router-link class="routerLink" to="/">Home</router-link><span class="routerLink"> | </span>
+        <router-link class="routerLink" to="/">GQL Home</router-link><span class="routerLink"> | </span>
         <router-link class="routerLink" to="/graphql-add">GQL Add</router-link><span class="routerLink"> | </span>
-        <router-link class="routerLink" to="/graphql-edit">GQL Edit</router-link><span class="routerLink"> | </span>
         <router-link class="routerLink" to="/rest-home">Rest Home</router-link><span class="routerLink"> | </span>
         <router-link class="routerLink" to="/rest-add">Rest Add</router-link><span class="routerLink"> | </span>
-        <router-link class="routerLink" to="/rest-edit">Rest Edit</router-link>
       </div>
     </v-app-bar>
 

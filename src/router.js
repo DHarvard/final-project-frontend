@@ -23,11 +23,6 @@ export default new VueRouter({
             component: GraphQLAdd
         },
         {
-            path: '/graphql-edit',
-            name: "graphql-edit",
-            component: GraphQLEdit
-        },
-        {
             path: '/graphql-edit/:recipeId',
             name: "graphql-edit",
             component: GraphQLEdit
@@ -43,7 +38,7 @@ export default new VueRouter({
             component: RestAdd
         },
         {
-            path: '/rest-edit',
+            path: '/rest-edit/:recipeId',
             name: "rest-edit",
             component: RestEdit
         },
