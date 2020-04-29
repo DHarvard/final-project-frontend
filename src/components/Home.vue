@@ -23,8 +23,21 @@
                   <h2> Instructions </h2>
                   <div > {{ item.instructions}} </div>
                   <h2> Ingredients </h2>
-                  <div> {{ item.ingredients}} </div>
+                  <v-row>
+                    <v-col cols="4" v-for="(item, i) in item.ingredients" :key="i">
+                      <h4>Title</h4>
+                      <div class="ingredients"> {{ item.title}} </div>
+                      <h4>Quantity</h4>
+                      <div class="ingredients"> {{ item.quantity}} </div>
+                      <h4>Type</h4>
+                      <div class="ingredients"> {{ item.type}} </div>
+                    </v-col>
+                  </v-row>
                 </v-card-text>
+                <v-card-actions>
+                  <v-btn color="secondary"><v-icon>mdi-pencil</v-icon></v-btn>
+                  <v-btn color="red"><v-icon>mdi-delete</v-icon></v-btn>
+                </v-card-actions>
               </v-card>
             </v-col>
           </v-row>
@@ -57,5 +70,8 @@ h1 {
 }
 h2 {
   padding: .5rem 0;
+}
+.ingredients {
+  background-color: #e1e1e1;
 }
 </style>

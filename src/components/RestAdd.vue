@@ -27,12 +27,12 @@
 <script>
 export default {
     name: 'RestAdd',
-    data: function() {
-        
-    },
+    data: () => ({
+        recipes: {}
+    }),
     methods: {
-        onDone() {
-        return console.log('Done')
+        createRecipe() {
+
         },
         returnHome() {
         console.log('Returning Home')

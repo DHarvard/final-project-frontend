@@ -32,8 +32,11 @@ export default {
         
     },
     methods: {
-        onDone() {
-        return console.log('Done')
+        updateRecipe() {
+
+        },
+        deleteRecipe() {
+
         },
         returnHome() {
         console.log('Returning Home')
